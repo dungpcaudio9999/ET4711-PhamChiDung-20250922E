@@ -1,0 +1,46 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  color: #172033;
+  background: #f3f6fa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.site-header, main, footer {
+  background: #ffffff;
+  border: 1px solid #d8dee8;
+  padding: 24px;
+}
+
+.site-header { border-top: 6px solid #2f80ed; }
+.course-code { color: #2f80ed; font-weight: 700; letter-spacing: .08em; }
+h1, h2 { line-height: 1.2; }
+section + section { margin-top: 32px; }
+
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 18px;
+  color: white;
+  background: #2f80ed;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:focus-visible { outline: 3px solid #ffbf47; outline-offset: 3px; }
+footer { margin-top: 16px; color: #566074; }
+
+@media (max-width: 560px) {
+  body { padding: 12px; }
+  .site-header, main, footer { padding: 18px; }
+}
+
