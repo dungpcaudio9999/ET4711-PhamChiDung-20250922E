@@ -10,9 +10,14 @@ các TODO CP1 và CP3 trong mã nguồn.
 
 - **CP1 — HTML5:** Thêm họ tên, MSSV, đoạn giới thiệu và danh sách năm mục tiêu học tập.
 - **CP3 — DOM:** Bắt sự kiện nhấn nút `#hello` và cập nhật `textContent` của `#message`
-  thành `Xin chào T4711! Tôi là Phạm Chí Dũng — 20250922E.`.
+  thành `Xin chào! Tôi là Phạm Chí Dũng — 20250922E.`.
 - Giữ cấu trúc HTML có ngữ nghĩa, CSS hỗ trợ màn hình nhỏ và vùng thông báo
   `aria-live="polite"` của mã khởi đầu.
+
+Giao diện dùng nền xanh đen, chữ màu kem và điểm nhấn vàng ấm, lấy cảm hứng từ
+[taalas.com](https://taalas.com/). Họa tiết được tạo bằng CSS, không dùng ảnh hay
+thư viện ngoài. Hiệu ứng xuất hiện khi tải/cuộn trang và khi bấm nút sẽ tự giảm
+theo cài đặt **Reduce motion** của hệ điều hành.
 
 ## Chạy bài lab
 
@@ -33,6 +38,7 @@ python3 -m http.server 8001 --bind 127.0.0.1
 
 Truy cập <http://127.0.0.1:8001>. Nhấn `Ctrl+C` trong terminal để dừng máy chủ.
 Dùng máy chủ HTTP để kiểm tra Network, thay vì mở tệp qua `file://`.
+Sau khi lưu thay đổi, nhấn `Ctrl+Shift+R` để trình duyệt tải lại CSS và JavaScript.
 
 ## Kiểm tra với DevTools
 

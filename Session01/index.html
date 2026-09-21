@@ -3,49 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1c26">
+  <meta name="description" content="Trang giới thiệu của Phạm Chí Dũng, sinh viên ET4711.">
   <title>Phạm Chí Dũng — ET4711 Session 01</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <header class="site-header">
-    <p class="course-code">ET4711</p>
-    <h1>Trang giới thiệu của sinh viên</h1>
+    <a class="brand" href="#top" aria-label="Phạm Chí Dũng — về đầu trang">
+      <span class="brand-mark" aria-hidden="true">PD</span>
+      <span>PHẠM CHÍ DŨNG</span>
+    </a>
+    <nav aria-label="Điều hướng chính">
+      <a href="#about">Giới thiệu</a>
+      <a href="#goals">Mục tiêu</a>
+      <a href="#interaction">Tương tác <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
 
-  <main>
-    <section aria-labelledby="about-title">
-      <h2 id="about-title">Giới thiệu</h2>
-      <p><strong>Họ và tên:</strong> Phạm Chí Dũng</p>
-      <p><strong>MSSV:</strong> 20250922E</p>
-      <p>
-        Xin chào! Mình là Phạm Chí Dũng, sinh viên đang học môn ET4711.
-        Qua môn học này, mình mong muốn nắm vững kiến thức nền tảng về lập trình web
-        và tự xây dựng các trang web có nội dung rõ ràng, dễ sử dụng.
-      </p>
+  <main id="top">
+    <section class="hero" id="about" aria-labelledby="about-title">
+      <div class="hero-art" aria-hidden="true">
+        <span class="art-ring art-ring-one"></span>
+        <span class="art-ring art-ring-two"></span>
+        <span class="art-core"></span>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> ET4711 / SESSION 01</p>
+        <h1 id="about-title">Xin chào, tôi là<br><span>Phạm Chí Dũng.</span></h1>
+        <p class="hero-lead">Một sinh viên đang học cách biến những ý tưởng thành trải nghiệm trên web.</p>
+        <div class="hero-bottom">
+          <p class="student-id">MÃ SINH VIÊN <strong>20250922E</strong></p>
+          <a class="text-link" href="#goals">Khám phá mục tiêu <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <p class="hero-index" aria-hidden="true">01 — PORTFOLIO</p>
     </section>
 
-    <section aria-labelledby="goals-title">
-      <h2 id="goals-title">Mục tiêu học tập</h2>
-      <ul>
-        <li>Sử dụng các thẻ HTML5 có ngữ nghĩa để tổ chức nội dung trang web.</li>
-        <li>Định dạng trang bằng CSS và điều chỉnh bố cục cho nhiều kích thước màn hình.</li>
-        <li>Dùng JavaScript để xử lý sự kiện và cập nhật nội dung DOM.</li>
-        <li>Sử dụng DevTools để kiểm tra HTML, CSS, lỗi JavaScript và các yêu cầu mạng.</li>
-        <li>Sử dụng Git để theo dõi thay đổi và quản lý mã nguồn bài thực hành.</li>
+    <section class="goals section-shell" id="goals" aria-labelledby="goals-title">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / HÀNH TRÌNH HỌC TẬP</p>
+        <h2 id="goals-title">Mỗi dòng code<br><em>là một bước tiến.</em></h2>
+        <p>Trong môn ET4711, tôi muốn xây dựng nền tảng vững chắc để tạo ra những trang web rõ ràng, hữu ích và dễ sử dụng.</p>
+      </div>
+      <ul class="goal-list">
+        <li class="reveal"><span class="goal-number">01</span><span>HTML5 có ngữ nghĩa</span><span class="goal-icon" aria-hidden="true">↗</span></li>
+        <li class="reveal"><span class="goal-number">02</span><span>CSS và giao diện thích ứng</span><span class="goal-icon" aria-hidden="true">↗</span></li>
+        <li class="reveal"><span class="goal-number">03</span><span>JavaScript và tương tác DOM</span><span class="goal-icon" aria-hidden="true">↗</span></li>
+        <li class="reveal"><span class="goal-number">04</span><span>DevTools và kiểm tra trang</span><span class="goal-icon" aria-hidden="true">↗</span></li>
+        <li class="reveal"><span class="goal-number">05</span><span>Git và quản lý mã nguồn</span><span class="goal-icon" aria-hidden="true">↗</span></li>
       </ul>
     </section>
 
-    <section aria-labelledby="interaction-title">
-      <h2 id="interaction-title">Tương tác DOM</h2>
-      <button id="hello" type="button">Hiển thị lời chào</button>
-      <p id="message" aria-live="polite">Chưa có thông báo.</p>
+    <section class="interaction section-shell" id="interaction" aria-labelledby="interaction-title">
+      <div class="interaction-inner reveal">
+        <p class="eyebrow">02 / TƯƠNG TÁC DOM</p>
+        <h2 id="interaction-title">Một lời chào,<br><em>một chuyển động.</em></h2>
+        <p>Nhấn nút để thấy JavaScript thay đổi nội dung trang ngay trước mắt bạn.</p>
+        <button id="hello" type="button">Hiển thị lời chào <span aria-hidden="true">↗</span></button>
+        <p id="message" role="status" aria-live="polite">Chưa có thông báo.</p>
+      </div>
+      <span class="interaction-orbit" aria-hidden="true"></span>
     </section>
   </main>
 
-  <footer>
-    <p>Buổi 1 — HTML5, DOM, DevTools và Git</p>
+  <footer class="site-footer">
+    <p>ET4711 <span aria-hidden="true">·</span> SESSION 01</p>
+    <p>Phạm Chí Dũng <span aria-hidden="true">·</span> 20250922E</p>
+    <a href="#top">Về đầu trang ↑</a>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
