@@ -1,3 +1,4 @@
+/* Thiết lập màu/chữ mặc định và các quy tắc nền tảng cho toàn trang. */
 :root {
   color-scheme: dark;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -12,6 +13,7 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 ::selection { color: #0b1c26; background: #e8b07c; }
 
+/* Header nằm trên hero; nav dùng liên kết tới các section trong cùng trang. */
 .site-header {
   position: absolute;
   z-index: 3;
@@ -33,6 +35,7 @@ button { font: inherit; }
 .site-header nav a:hover { background: #f3ead8; color: #0b1c26; border-color: #f3ead8; }
 .site-header nav span { margin-left: 9px; }
 
+/* Hero chiếm phần đầu trang, dùng gradient để tạo chiều sâu mà không cần ảnh. */
 .hero {
   position: relative;
   display: flex;
@@ -47,6 +50,7 @@ button { font: inherit; }
     linear-gradient(145deg, #102c39, #0b1c26 67%);
 }
 
+/* Hai lớp giả tạo lưới mờ và lớp phủ để chữ nổi rõ trên nền. */
 .hero::before {
   content: "";
   position: absolute;
@@ -68,26 +72,41 @@ button { font: inherit; }
   background: linear-gradient(to top, #0b1c26 3%, transparent 65%);
 }
 
+/* Các vòng tròn là chi tiết trang trí của hero, không mang nội dung. */
 .hero-art { position: absolute; z-index: -1; inset: 6% 10% auto auto; width: min(60vw, 780px); aspect-ratio: 1; opacity: .72; }
 .art-ring { position: absolute; inset: 0; border: 1px solid rgb(232 176 124 / 30%); border-radius: 50%; box-shadow: inset 0 0 70px rgb(232 176 124 / 5%); }
 .art-ring-one { inset: 12%; border-style: dashed; animation: ring-turn 90s linear infinite; }
 .art-ring-two { inset: 28%; border-color: rgb(242 227 188 / 28%); }
 .art-core { position: absolute; inset: 38%; border: 1px solid rgb(232 176 124 / 45%); border-radius: 50%; background: radial-gradient(circle, rgb(232 176 124 / 24%), transparent 65%); box-shadow: 0 0 100px rgb(232 176 124 / 12%); }
+/* Nội dung hero dùng clamp() để cỡ chữ co giãn theo chiều rộng màn hình. */
 .hero-content { position: relative; width: min(100%, 950px); }
 .eyebrow { margin: 0; color: #e8b07c; font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
 .eyebrow-line { display: inline-block; width: 28px; height: 1px; margin: 0 12px 4px 0; background: currentColor; }
 h1, h2, p { overflow-wrap: anywhere; }
-h1 { margin: 23px 0 25px; font-size: clamp(3.8rem, 8.5vw, 9rem); font-weight: 600; letter-spacing: -.075em; line-height: .99; }
+h1 { margin: 23px 0 25px; font-size: clamp(3.4rem, 7vw, 7rem); font-weight: 600; letter-spacing: -.075em; line-height: .99; }
 h1 span { color: #f2e3bc; }
 .hero-lead { max-width: 510px; color: #b8c7c9; font-size: clamp(1.1rem, 1.5vw, 1.45rem); line-height: 1.55; }
 .hero-bottom { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; max-width: 730px; margin-top: 58px; }
-.student-id { margin: 0; color: #9fb1b7; font-size: 11px; letter-spacing: .16em; }
-.student-id strong { display: block; margin-top: 8px; color: #f3ead8; font-size: 18px; font-weight: 500; letter-spacing: .04em; }
+.group-stat { margin: 0; color: #9fb1b7; font-size: 11px; letter-spacing: .16em; }
+.group-stat strong { display: block; margin-top: 8px; color: #f3ead8; font-size: 18px; font-weight: 500; letter-spacing: .04em; }
 .text-link { display: inline-flex; align-items: center; gap: 16px; padding-bottom: 8px; border-bottom: 1px solid #e8b07c; color: #e8b07c; font-size: 14px; transition: gap .25s ease, color .25s ease; }
 .text-link:hover { gap: 24px; color: #fff; }
 .hero-index { position: absolute; right: clamp(24px, 5vw, 88px); bottom: 35px; color: #889ea5; font-size: 10px; letter-spacing: .2em; }
 
+/* Khoảng đệm chung và hai thẻ thành viên đặt cạnh nhau trên màn hình rộng. */
 .section-shell { padding: clamp(90px, 10vw, 150px) clamp(24px, 8vw, 136px); }
+.members { background: #112d39; }
+.members-heading { max-width: 760px; }
+.members-heading h2 em { color: #e8b07c; }
+.members-heading > p:last-child { max-width: 580px; color: #b8c7c9; font-size: 17px; line-height: 1.75; }
+.member-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 62px 0 0; padding: 0; list-style: none; }
+.member-card { min-height: 250px; padding: clamp(28px, 4vw, 52px); border: 1px solid rgb(232 176 124 / 32%); background: linear-gradient(145deg, rgb(232 176 124 / 9%), rgb(11 28 38 / 45%)); }
+.member-number { color: #e8b07c; font-size: 12px; letter-spacing: .2em; }
+.member-card h3 { margin: 56px 0 14px; font-size: clamp(1.8rem, 3vw, 3rem); font-weight: 600; letter-spacing: -.05em; line-height: 1.1; }
+.member-card p { margin: 0; color: #b8c7c9; font-size: 14px; }
+.member-card strong { color: #f3ead8; font-weight: 600; }
+
+/* Phần mục tiêu có nền sáng, một cột mô tả và một cột danh sách. */
 .goals { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(50px, 8vw, 140px); background: #f2e9d8; color: #102633; }
 .goals .eyebrow { color: #ad7045; }
 h2 { margin: 24px 0; font-size: clamp(3.2rem, 5.4vw, 6.4rem); font-weight: 600; letter-spacing: -.07em; line-height: 1.04; }
@@ -100,6 +119,7 @@ h2 em { color: #967154; font-style: normal; }
 .goal-number { color: #a4643d; font-size: 12px; letter-spacing: .1em; }
 .goal-icon { justify-self: end; color: #a4643d; font-size: 23px; }
 
+/* Khu vực tương tác: nút #hello và trạng thái #message được script.js cập nhật. */
 .interaction { position: relative; min-height: 600px; display: flex; align-items: center; overflow: hidden; background: radial-gradient(circle at 82% 45%, #204452, transparent 42%), #0b1c26; }
 .interaction-inner { position: relative; z-index: 1; max-width: 730px; }
 .interaction h2 em { color: #e8b07c; }
@@ -112,32 +132,39 @@ h2 em { color: #967154; font-style: normal; }
 #message.is-greeting { color: #f2e3bc; }
 .interaction-orbit { position: absolute; right: -13vw; top: 5%; width: min(70vw, 900px); aspect-ratio: 1; border: 1px solid rgb(232 176 124 / 21%); border-radius: 50%; box-shadow: 0 0 0 80px rgb(232 176 124 / 3%), 0 0 0 160px rgb(232 176 124 / 2%); pointer-events: none; }
 
+/* Footer và viền focus giúp các liên kết/nút dễ nhận ra khi dùng bàn phím. */
 .site-footer { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 30px clamp(24px, 8vw, 136px); border-top: 1px solid rgb(243 234 216 / 17%); color: #9cb0b7; font-size: 11px; letter-spacing: .1em; }
 .site-footer p { margin: 0; }
 .site-footer a:hover { color: #e8b07c; }
 a:focus-visible, button:focus-visible { outline: 2px solid #e8b07c; outline-offset: 5px; }
 
+/* Chỉ bật animation khi người dùng không yêu cầu giảm chuyển động. */
 @media (prefers-reduced-motion: no-preference) {
   .hero-content > * { animation: rise-in .9s both; }
   .hero-content > :nth-child(2) { animation-delay: .12s; }
   .hero-content > :nth-child(3) { animation-delay: .24s; }
   .hero-content > :nth-child(4) { animation-delay: .36s; }
+  /* JS thêm .reveal-ready sau khi tạo observer; .is-visible mở phần tử khi cuộn tới. */
   .reveal-ready .reveal { opacity: 0; transform: translateY(25px); transition: opacity .8s ease, transform .8s ease; }
   .reveal-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
   @keyframes rise-in { from { opacity: .45; transform: translateY(26px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes ring-turn { to { transform: rotate(360deg); } }
 }
 
+/* Tắt cuộn mượt và rút ngắn animation/transition cho chế độ Reduce motion. */
 @media (prefers-reduced-motion: reduce) {
   :root { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
 
+/* Tablet: thẻ thành viên và danh sách mục tiêu chuyển về một cột. */
 @media (max-width: 850px) {
+  .member-list { grid-template-columns: 1fr; }
   .goals { grid-template-columns: 1fr; gap: 45px; }
   .hero-art { width: 85vw; inset: 12% -20% auto auto; }
 }
 
+/* Điện thoại: nav xuống dưới logo, giảm cỡ chữ/khoảng đệm để tránh tràn ngang. */
 @media (max-width: 600px) {
   .site-header { min-height: 85px; align-items: flex-start; flex-direction: column; gap: 18px; }
   .brand { font-size: 11px; }
@@ -149,6 +176,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid #e8b07c; outline-offs
   .hero-bottom { align-items: flex-start; flex-direction: column; gap: 25px; margin-top: 42px; }
   .hero-index { display: none; }
   .section-shell { padding-top: 86px; padding-bottom: 86px; }
+  .member-list { margin-top: 42px; }
+  .member-card { min-height: 210px; }
+  .member-card h3 { margin-top: 38px; }
   .goal-list li { min-height: 78px; }
   .interaction { min-height: 560px; }
   .interaction-orbit { right: -70%; width: 130vw; }

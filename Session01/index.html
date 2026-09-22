@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <!-- Metadata giúp trình duyệt hiển thị đúng tiếng Việt, màn hình nhỏ và thông tin trang. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b1c26">
-  <meta name="description" content="Trang giới thiệu của Phạm Chí Dũng, sinh viên ET4711.">
-  <title>Phạm Chí Dũng — ET4711 Session 01</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <meta name="description" content="Giới thiệu Nhóm 06 môn ET4711: Phạm Chí Dũng và Nguyễn Hoàng Nam.">
+  <title>Nhóm 06 — ET4711 Session 01</title>
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
+  <!-- Thanh điều hướng liên kết tới các section có id tương ứng bên dưới. -->
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Phạm Chí Dũng — về đầu trang">
-      <span class="brand-mark" aria-hidden="true">PD</span>
-      <span>PHẠM CHÍ DŨNG</span>
+    <a class="brand" href="#top" aria-label="Nhóm 06 — về đầu trang">
+      <span class="brand-mark" aria-hidden="true">06</span>
+      <span>NHÓM 06</span>
     </a>
     <nav aria-label="Điều hướng chính">
       <a href="#about">Giới thiệu</a>
+      <a href="#members">Thành viên</a>
       <a href="#goals">Mục tiêu</a>
       <a href="#interaction">Tương tác <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main id="top">
+    <!-- Hero giới thiệu nhóm; các vòng tròn chỉ để trang trí nên được ẩn khỏi trình đọc màn hình. -->
     <section class="hero" id="about" aria-labelledby="about-title">
       <div class="hero-art" aria-hidden="true">
         <span class="art-ring art-ring-one"></span>
@@ -30,21 +34,43 @@
       </div>
       <div class="hero-content">
         <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> ET4711 / SESSION 01</p>
-        <h1 id="about-title">Xin chào, tôi là<br><span>Phạm Chí Dũng.</span></h1>
-        <p class="hero-lead">Một sinh viên đang học cách biến những ý tưởng thành trải nghiệm trên web.</p>
+        <h1 id="about-title">Xin chào,<br><span>chúng mình là Nhóm 06.</span></h1>
+        <p class="hero-lead">Gồm Phạm Chí Dũng và Nguyễn Hoàng Nam, hai sinh viên cùng học ET4711 và khám phá cách xây dựng trải nghiệm trên web.</p>
         <div class="hero-bottom">
-          <p class="student-id">MÃ SINH VIÊN <strong>20250922E</strong></p>
-          <a class="text-link" href="#goals">Khám phá mục tiêu <span aria-hidden="true">↘</span></a>
+          <p class="group-stat">THÀNH VIÊN <strong>02 người</strong></p>
+          <a class="text-link" href="#members">Gặp các thành viên <span aria-hidden="true">↘</span></a>
         </div>
       </div>
-      <p class="hero-index" aria-hidden="true">01 — PORTFOLIO</p>
+      <p class="hero-index" aria-hidden="true">06 — ET4711</p>
     </section>
 
+    <!-- Danh sách thành viên là nội dung chính để người xem biết nhóm gồm những ai. -->
+    <section class="members section-shell" id="members" aria-labelledby="members-title">
+      <div class="members-heading">
+        <p class="eyebrow">01 / NHÓM 06</p>
+        <h2 id="members-title">Gặp gỡ<br><em>các thành viên.</em></h2>
+        <p>Nhóm 06 gồm hai sinh viên cùng thực hiện bài thực hành Session 01 của môn ET4711.</p>
+      </div>
+      <ul class="member-list">
+        <li class="member-card">
+          <span class="member-number" aria-hidden="true">01</span>
+          <h3>Phạm Chí Dũng</h3>
+          <p>Mã số sinh viên <strong>20250922E</strong></p>
+        </li>
+        <li class="member-card">
+          <span class="member-number" aria-hidden="true">02</span>
+          <h3>Nguyễn Hoàng Nam</h3>
+          <p>Mã số sinh viên <strong>20250169E</strong></p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Giữ danh sách mục tiêu của bài lab; class reveal dùng cho hiệu ứng khi cuộn. -->
     <section class="goals section-shell" id="goals" aria-labelledby="goals-title">
       <div class="section-heading reveal">
-        <p class="eyebrow">01 / HÀNH TRÌNH HỌC TẬP</p>
+        <p class="eyebrow">02 / HÀNH TRÌNH HỌC TẬP</p>
         <h2 id="goals-title">Mỗi dòng code<br><em>là một bước tiến.</em></h2>
-        <p>Trong môn ET4711, tôi muốn xây dựng nền tảng vững chắc để tạo ra những trang web rõ ràng, hữu ích và dễ sử dụng.</p>
+        <p>Trong môn ET4711, nhóm hướng tới việc xây dựng nền tảng vững chắc để tạo ra những trang web rõ ràng, hữu ích và dễ sử dụng.</p>
       </div>
       <ul class="goal-list">
         <li class="reveal"><span class="goal-number">01</span><span>HTML5 có ngữ nghĩa</span><span class="goal-icon" aria-hidden="true">↗</span></li>
@@ -55,24 +81,28 @@
       </ul>
     </section>
 
+    <!-- script.js lắng nghe nút hello và cập nhật vùng thông báo message. -->
     <section class="interaction section-shell" id="interaction" aria-labelledby="interaction-title">
       <div class="interaction-inner reveal">
-        <p class="eyebrow">02 / TƯƠNG TÁC DOM</p>
+        <p class="eyebrow">03 / TƯƠNG TÁC DOM</p>
         <h2 id="interaction-title">Một lời chào,<br><em>một chuyển động.</em></h2>
-        <p>Nhấn nút để thấy JavaScript thay đổi nội dung trang ngay trước mắt bạn.</p>
-        <button id="hello" type="button">Hiển thị lời chào <span aria-hidden="true">↗</span></button>
+        <p>Nhấn nút để nhận lời chào từ Nhóm 06 và thấy JavaScript thay đổi nội dung trang.</p>
+        <button id="hello" type="button">Nhận lời chào <span aria-hidden="true">↗</span></button>
+        <!-- role=status và aria-live báo nội dung mới cho công nghệ hỗ trợ. -->
         <p id="message" role="status" aria-live="polite">Chưa có thông báo.</p>
       </div>
       <span class="interaction-orbit" aria-hidden="true"></span>
     </section>
   </main>
 
+  <!-- Footer lặp lại tên nhóm và có liên kết về đầu trang. -->
   <footer class="site-footer">
     <p>ET4711 <span aria-hidden="true">·</span> SESSION 01</p>
-    <p>Phạm Chí Dũng <span aria-hidden="true">·</span> 20250922E</p>
+    <p>Nhóm 06 <span aria-hidden="true">·</span> Phạm Chí Dũng &amp; Nguyễn Hoàng Nam</p>
     <a href="#top">Về đầu trang ↑</a>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <!-- Đặt script ở cuối body để các phần tử #hello và #message đã tồn tại khi JS chạy. -->
+  <script src="script.js?v=3"></script>
 </body>
 </html>

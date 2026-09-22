@@ -1,16 +1,28 @@
 # ET4711 — Session 01
 
-Sinh viên: **Phạm Chí Dũng** — MSSV: **20250922E**.
+**Nhóm 06** gồm hai thành viên:
 
-Thông tin sinh viên được suy ra từ tên thư mục dự án; cần đối chiếu trước khi nộp.
+- **Phạm Chí Dũng** — MSSV: **20250922E**.
+- **Nguyễn Hoàng Nam** — MSSV: **20250169E**.
+
 Thư mục khởi đầu không kèm tài liệu Guided Lab riêng, nên phần thực hiện dựa trên
 các TODO CP1 và CP3 trong mã nguồn.
 
+## Tính năng hiện có
+
+- **Giới thiệu Nhóm 06:** Phần đầu trang nêu tên nhóm và hai thành viên; các thẻ thành viên hiển thị họ tên cùng MSSV của từng người.
+- **Điều hướng trong trang:** Thanh menu dẫn đến phần giới thiệu, thành viên, mục tiêu và tương tác; liên kết cuối trang đưa người xem về đầu trang.
+- **Mục tiêu học tập:** Danh sách năm chủ đề nhóm hướng tới trong môn ET4711.
+- **Lời chào tương tác:** Nhấn **Nhận lời chào** để JavaScript cập nhật thông báo bằng tên và MSSV của cả hai thành viên, không tải lại trang. Vùng thông báo dùng `role="status"` và `aria-live="polite"`.
+- **Giao diện thích ứng:** Bố cục và cỡ chữ điều chỉnh theo chiều rộng màn hình; thẻ thành viên và phần mục tiêu chuyển thành một cột trên màn hình hẹp.
+- **Hiệu ứng giao diện:** Có chuyển động khi tải/cuộn trang, hiệu ứng hover và phản hồi khi nhấn nút. Chuyển động được giảm theo cài đặt **Reduce motion** của người dùng.
+- **Sử dụng bằng bàn phím:** Liên kết và nút có viền focus; nút có thể kích hoạt bằng `Enter` hoặc phím cách.
+
 ## Nội dung đã thực hiện
 
-- **CP1 — HTML5:** Thêm họ tên, MSSV, đoạn giới thiệu và danh sách năm mục tiêu học tập.
+- **CP1 — HTML5:** Giới thiệu Nhóm 06, hiển thị họ tên và MSSV của hai thành viên, cùng danh sách năm mục tiêu học tập.
 - **CP3 — DOM:** Bắt sự kiện nhấn nút `#hello` và cập nhật `textContent` của `#message`
-  thành `Xin chào! Tôi là Phạm Chí Dũng — 20250922E.`.
+  thành lời chào có tên và MSSV của cả hai thành viên.
 - Giữ cấu trúc HTML có ngữ nghĩa, CSS hỗ trợ màn hình nhỏ và vùng thông báo
   `aria-live="polite"` của mã khởi đầu.
 
@@ -42,7 +54,7 @@ Sau khi lưu thay đổi, nhấn `Ctrl+Shift+R` để trình duyệt tải lại
 
 ## Kiểm tra với DevTools
 
-1. Kiểm tra trang hiển thị đúng họ tên, MSSV, giới thiệu và năm mục tiêu học tập.
+1. Kiểm tra trang hiển thị Nhóm 06, đúng họ tên và MSSV của hai thành viên, phần giới thiệu và năm mục tiêu học tập.
 2. Trong **Elements**, tìm các thẻ `header`, `main`, `section`, `footer` và danh sách `ul/li`.
    Chọn nút `#hello`, xem các quy tắc CSS ở **Styles** và thử sửa màu nền để quan sát.
    Thay đổi trực tiếp trong DevTools chỉ là tạm thời và mất khi tải lại trang.
@@ -50,7 +62,7 @@ Sau khi lưu thay đổi, nhấn `Ctrl+Shift+R` để trình duyệt tải lại
    Kiểm tra tài liệu HTML, `style.css` và `script.js` được tải thành công (HTTP `200`),
    cùng kiểu nội dung tương ứng HTML, CSS và JavaScript.
 4. Kiểm tra **Console** không có lỗi JavaScript. Trước khi nhấn nút, thông báo là
-   `Chưa có thông báo.`. Nhấn **Hiển thị lời chào** và kiểm tra lời chào đúng như trên.
+   `Chưa có thông báo.`. Nhấn **Nhận lời chào** và kiểm tra lời chào có thông tin của cả hai thành viên.
    Quan sát `#message` trong **Elements** để thấy DOM được cập nhật.
 5. Nhấn nút nhiều lần: lời chào vẫn đúng, không tạo thêm phần tử hay tải lại trang.
    Tải lại trang để đưa thông báo về trạng thái ban đầu.
